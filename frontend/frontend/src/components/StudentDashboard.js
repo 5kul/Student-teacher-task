@@ -5,7 +5,7 @@ function StudentDashboard() {
   const [assignments, setAssignments] = useState([]);
 
   useEffect(() => {
-    axios.get("https://student-teacher-task-1rd0.onrender.com/api/assignments")
+    axios.get("https://student-teacher-task-1.onrender.com/api/assignments")
       .then(res => setAssignments(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -32,4 +32,5 @@ function StudentDashboard() {
 }
 
 export default StudentDashboard;
+
 
