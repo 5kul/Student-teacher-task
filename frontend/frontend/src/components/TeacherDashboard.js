@@ -19,7 +19,7 @@ function TeacherDashboard({ user, logout }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/assignments", assignment, {
+      await axios.post("https://student-teacher-task-1rd0.onrender.com", assignment, {
         headers: { "Content-Type": "application/json" }
       });
       setMessage("✅ Assignment added successfully!");
@@ -81,3 +81,4 @@ function TeacherDashboard({ user, logout }) {
 }
 
 export default TeacherDashboard;
+
