@@ -11,11 +11,11 @@ function AuthForm({ setUser }) {
     e.preventDefault();
     try {
       if (isSignup) {
-        await axios.post("https://student-teacher-task-1rd0.onrender.com", form);
+        await axios.post("https://student-teacher-task-1rd0.onrender.com/api/auth/signup", form);
         alert("Signup successful! Please login.");
         setIsSignup(false);
       } else {
-        const res = await axios.post("https://student-teacher-task-1rd0.onrender.com", form);
+        const res = await axios.post("https://student-teacher-task-1rd0.onrender.com/api/auth/login", form);
         setUser(res.data);
         localStorage.setItem("token", res.data.token);
       }
@@ -49,4 +49,5 @@ function AuthForm({ setUser }) {
 }
 
 export default AuthForm;
+
 
