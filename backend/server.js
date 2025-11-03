@@ -13,7 +13,7 @@ const app = express();
 
 // ✅ Middleware (must come before routes)
 app.use(cors({
-  origin: "https://student-teacher-task-7opg.vercel.app",
+  origin: "https://student-teacher-task-7opg.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
@@ -32,4 +32,5 @@ app.use("/api/assignments", assignmentRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+
 
